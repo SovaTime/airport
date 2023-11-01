@@ -1,0 +1,6 @@
+rootProject.name = 'airport'
+include 'domain'
+include 'generator'
+include 'serialization'
+include 'deserialization'
+
