@@ -10,22 +10,17 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
     implementation project(':serialization')
     implementation project(':deserialization')
-}
-
-test {
-    useJUnitPlatform()
+    implementation project(':servlets')
 }
 
 tasks.register('serializeData', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'Serialize'
+    mainClass = 'Serialize'
 }
 
 tasks.register('deserializeData', JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
-    main = 'Deserialize'
+    mainClass = 'Deserialize'
 }
